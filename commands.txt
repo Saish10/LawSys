@@ -1,0 +1,4 @@
+python manage.py create-tenant
+
+python manage.py create_tenant_superuser --email=tenant1@lawsys.com  --schema=tenant1
+
