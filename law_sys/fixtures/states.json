@@ -1,0 +1,11 @@
+[
+    {
+      "model": "base.state",
+      "pk": 1,
+      "fields": {
+        "name": "Goa",
+        "code": "GA",
+        "country": 1
+      }
+    }
+  ]

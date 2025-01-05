@@ -67,9 +67,11 @@ class UserAccount(BaseModel, AbstractBaseUser, PermissionsMixin):
             ("O", _("Other")),
             ("N", _("Prefer not to say")),
         ],
-        default="N",
         help_text=_("Gender"),
         verbose_name=_("Gender"),
+        null=True,
+        blank=True,
+
     )
     date_of_birth = models.DateField(
         null=True,
@@ -94,6 +96,13 @@ class UserAccount(BaseModel, AbstractBaseUser, PermissionsMixin):
         max_length=255,
         help_text=_("City"),
         verbose_name=_("City"),
+        null=True,
+        blank=True,
+    )
+    zip_code = models.CharField(
+        max_length=10,
+        help_text=_("Zip Code"),
+        verbose_name=_("Zip Code"),
         null=True,
         blank=True,
     )

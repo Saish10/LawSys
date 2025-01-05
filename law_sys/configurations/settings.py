@@ -57,6 +57,11 @@ TENANT_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "accounts",
+    "access_control",
+    "cases",
+    "defendants",
+    "plaintiffs",
+    "documents",
 ]
 
 INSTALLED_APPS = list(SHARED_APPS) + [

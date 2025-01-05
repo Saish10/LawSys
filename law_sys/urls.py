@@ -21,7 +21,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
-schema_view = get_schema_view(
+SchemaView = get_schema_view(
     openapi.Info(
         title="LawSys",
         default_version="v1",
@@ -35,10 +35,10 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path(
         "swagger/",
-        schema_view.with_ui("swagger", cache_timeout=0),
+        SchemaView.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
     path(
@@ -46,7 +46,34 @@ urlpatterns = [
         include(("base.urls", "base"), namespace="base"),
     ),
     path(
-        "accounts/",
+        "",
+        include(
+            ("access_control.urls", "access_control"),
+            namespace="access_control",
+        ),
+    ),
+    path(
+        "account/",
         include(("accounts.urls", "accounts"), namespace="accounts"),
+    ),
+    path(
+        "case/",
+        include(("cases.urls", "cases"), namespace="cases"),
+    ),
+    path(
+        "document/",
+        include(("documents.urls", "documents"), namespace="documents"),
+    ),
+    path(
+        "defendant/",
+        include(("defendants.urls", "defendants"), namespace="defendants"),
+    ),
+    path(
+        "plaintiff/",
+        include(("plaintiffs.urls", "plaintiffs"), namespace="plaintiffs"),
+    ),
+    path(
+        "customer/",
+        include(("customers.urls", "customers"), namespace="customers"),
     ),
 ]

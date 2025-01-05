@@ -1,0 +1,14 @@
+[
+    {
+      "model": "base.country",
+      "pk": 1,
+      "fields": {
+        "name": "India",
+        "numeric_code": "356",
+        "alpha2_code": "IN",
+        "alpha3_code": "IND",
+        "isd_code": "+91",
+        "currency": 1
+      }
+    }
+  ]

@@ -1,0 +1,11 @@
+[
+    {
+      "model": "base.currency",
+      "pk": 1,
+      "fields": {
+        "name": "Indian Rupee",
+        "code": "INR",
+        "symbol": "₹"
+      }
+    }
+  ]
